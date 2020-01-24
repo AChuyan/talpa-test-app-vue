@@ -6,9 +6,7 @@
       <template slot-scope="{ result: { data, loading } }">
         <div class="loader" v-if="loading">Loading...</div>
         <ul v-if="data && data.machines">
-          <li v-bind:key="machine.id" v-for="machine of data.machines" class="machine-card">
-            {{ machine.name }}
-          </li>
+          <machine-list-item v-bind:machine="machine" v-bind:key="machine.id" v-for="machine of data.machines" />
         </ul>
       </template>
     </ApolloQuery>
@@ -18,6 +16,7 @@
 <script>
 import { ApolloQuery } from 'vue-apollo';
 import { machines } from '../../graphql/machines';
+import MachineListItem from './MachineListItem';
 
 export default {
   data () {
@@ -27,6 +26,7 @@ export default {
   },
   components: {
     ApolloQuery,
+    MachineListItem,
   },
   name: 'machine-list',
 }
