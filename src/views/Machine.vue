@@ -1,11 +1,16 @@
 <template>
   <div class="machine-view-page">
-    <h3>Machine view</h3>
+    <machine-view />
   </div>
 </template>
 
 <script>
+  import MachineView from "../components/mashines/MachineView";
+
   export default {
+    components: {
+      MachineView,
+    },
     name: 'machine-page',
   }
 </script>
