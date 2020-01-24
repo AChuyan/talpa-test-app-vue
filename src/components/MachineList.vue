@@ -1,5 +1,6 @@
 <template>
   <div class="machine-list">
+    <h2>Machine list component</h2>
     <div>{{ hello }}</div>
   </div>
 </template>
@@ -15,6 +16,7 @@ export default {
       }
     }`,
   },
+  name: 'machine-list',
 }
 </script>
 
