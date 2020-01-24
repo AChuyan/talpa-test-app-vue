@@ -12,6 +12,6 @@
     components: {
       MachineList,
     },
-    name: 'machines',
+    name: 'machines-page',
   }
 </script>
