@@ -12,7 +12,7 @@
             <span> {{ data.machine.lastKnownPosition.lng }}</span>
           </p>
         </div>
-        <sensors-section />
+        <sensors-section v-bind:sensors="data.machine.sensors" />
       </template>
     </ApolloQuery>
   </div>
@@ -21,7 +21,7 @@
 <script>
   import { machine } from "../../graphql/machine";
   import { getMachineName } from "../../utils/helpers";
-  import SensorsSection from "./SensorsSections";
+  import SensorsSection from "./SensorsSection";
 
   export default {
     components: {

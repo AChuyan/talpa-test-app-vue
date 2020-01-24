@@ -12,15 +12,17 @@
       </option>
     </select>
 
-    <div v-if="selectedSensorId">
-      {{selectedSensorId}}
-    </div>
-
+    <sensor-data-list v-if="selectedSensorId" v-bind:sensorId="selectedSensorId" />
   </div>
 </template>
 
 <script>
+  import SensorDataList from './SensorDataList';
+
   export default {
+    components: {
+      SensorDataList,
+    },
     data() {
       return {
         selectedSensorId: null
