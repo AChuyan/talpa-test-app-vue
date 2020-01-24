@@ -5,3 +5,7 @@ export const getMachineName = str => {
 
   return str.split('_').join(' ')
 };
+
+export const formatTime = time =>
+  new Date(time).toLocaleString();
+

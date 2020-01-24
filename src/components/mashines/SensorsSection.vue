@@ -1,14 +1,12 @@
 <template>
   <div class="sensors-section">
-    <h3>Please select Sensor</h3>
-
     <select class="sensor-select" v-model="selectedSensorId">
       <option
         v-for="sensor of sensors"
         v-bind:key="sensor.id"
         v-bind:value="sensor.id"
       >
-        {{sensor.name}}
+        {{ sensor.name }}
       </option>
     </select>
 
@@ -37,6 +35,7 @@
   .sensor-select {
     font: 1rem 'Avenir', Helvetica, Arial, sans-serif;
     height: 2rem;
+    padding: 1rem;
     width: 100%;
   }
 </style>
