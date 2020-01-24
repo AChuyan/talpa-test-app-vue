@@ -9,7 +9,10 @@ export const machine = gql`
         lat
         lng
       }
-      
+      sensors {
+        id
+        name
+      }
     }
   }
   ${MachineFragment}
