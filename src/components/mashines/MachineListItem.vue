@@ -5,10 +5,10 @@
 </template>
 
 <script>
-export default {
-  name: 'machine-list-item',
-  props: ['machine'],
-}
+  export default {
+    name: 'machine-list-item',
+    props: ['machine'],
+  }
 </script>
 
 <style scoped>

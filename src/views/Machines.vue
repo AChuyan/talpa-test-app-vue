@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is a machines page</h1>
+  <div class="machines-list-page">
+    <h3>List of available machines</h3>
     <machine-list />
   </div>
 </template>
@@ -12,13 +12,6 @@
     components: {
       MachineList,
     },
-    name: 'HelloWorld',
+    name: 'machines',
   }
 </script>
-
-<style scoped>
-
-</style>
-
-
-
