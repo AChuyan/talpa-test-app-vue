@@ -5,6 +5,8 @@
 </template>
 
 <script>
+  import { getMachineName } from "../../utils/helpers";
+
   export default {
     name: 'machine-list-item',
     props: ['machine'],
@@ -13,7 +15,7 @@
         return `/machine/${this.machine.id}`;
       },
       title: function () {
-        return this.machine.name.split('_').join(' ');
+        return getMachineName(this.machine.name);
       }
     }
   }
