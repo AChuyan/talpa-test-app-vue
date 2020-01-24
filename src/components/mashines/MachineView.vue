@@ -12,6 +12,7 @@
             <span> {{ data.machine.lastKnownPosition.lng }}</span>
           </p>
         </div>
+        <sensors-section />
       </template>
     </ApolloQuery>
   </div>
@@ -20,8 +21,12 @@
 <script>
   import { machine } from "../../graphql/machine";
   import { getMachineName } from "../../utils/helpers";
+  import SensorsSection from "./SensorsSections";
 
   export default {
+    components: {
+      SensorsSection
+    },
     data() {
       return {
         query: machine,
