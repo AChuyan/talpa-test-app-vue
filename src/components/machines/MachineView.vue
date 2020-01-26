@@ -53,4 +53,12 @@
     display: flex;
     justify-content: space-between;
   }
+  @media (max-width: 420px) {
+    .machine-info {
+      flex-direction: column;
+    }
+    .machine-view-title {
+      margin: 0;
+    }
+  }
 </style>

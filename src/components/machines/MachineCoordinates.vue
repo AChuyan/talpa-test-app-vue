@@ -1,5 +1,6 @@
 <template>
   <p class="machine-coordinates">
+    Coordinates:
     <span>lat={{ get(coordinates, 'lat', placeholder) }}</span>
     <span>lng={{ get(coordinates, 'lng', placeholder) }}</span>
   </p>
