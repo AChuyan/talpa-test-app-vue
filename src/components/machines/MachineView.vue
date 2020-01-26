@@ -8,8 +8,8 @@
         <div class="machine-info" v-if="data && data.machine">
           <h4>{{ getTitle(data.machine.name) }}</h4>
           <p>Position:
-            <span>lat={{ data.machine.lastKnownPosition.lat }}</span>
-            <span> lng={{ data.machine.lastKnownPosition.lng }}</span>
+            <span>lat={{ get(data, 'machine.lastKnownPosition.lat', coordinatesPlaceholder) }}</span>
+            <span> lng={{ get(data, 'machine.lastKnownPosition.lng', coordinatesPlaceholder) }}</span>
           </p>
         </div>
         <sensors-section v-if="data && data.machine" v-bind:sensors="data && data.machine && data.machine.sensors"/>
@@ -22,6 +22,7 @@
   import { machine } from "../../graphql/machine";
   import { getTitle } from "../../utils/helpers";
   import SensorsSection from "./SensorsSection";
+  import get from "lodash.get";
 
   export default {
     components: {
@@ -29,10 +30,12 @@
     },
     data() {
       return {
+        coordinatesPlaceholder: 'unknown',
         query: machine,
       }
     },
     methods: {
+      get,
       getTitle,
     },
     name: 'machine-view',
