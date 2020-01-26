@@ -20,5 +20,17 @@ npm run build
 npm run lint
 ```
 
+### Run unit tests
+```
+npm run test:unit
+```
+
+### Generate unit tests coverage.
+This command will also update snapshots.
+To see coverage please visit `output` folder.
+```
+npm run test:coverage
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
