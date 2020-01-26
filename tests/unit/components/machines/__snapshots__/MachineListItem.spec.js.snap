@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MachineListItem component renders correctly 1`] = `
+<a
+  class="machine-list-item"
+>
+  <p>
+    name
+  </p>
+</a>
+`;
