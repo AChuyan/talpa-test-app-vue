@@ -8,7 +8,8 @@
           <p>Time:</p>
           <p>Value:</p>
         </li>
-        <li class="list-line" v-for="item of data.sensor.data" v-bind:key="item.time">
+        <!-- TODO key attribute here should be unique. Check in future if it's possible to have 2 list items with the same time value -->
+        <li class="list-line" v-for="item of data.sensor.data" v-bind:key="generateKey(item.time)">
           <p>{{ formatTime(item.time) }}</p>
           <p>{{ item.value }}</p>
         </li>
@@ -29,6 +30,7 @@
       }
     },
     methods: {
+      generateKey: time => new Date(time).getTime(),
       formatTime,
     },
     name: 'sensor-data-list',

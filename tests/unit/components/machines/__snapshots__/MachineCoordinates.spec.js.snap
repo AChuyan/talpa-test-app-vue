@@ -4,6 +4,9 @@ exports[`MachineCoordinates component renders correctly 1`] = `
 <p
   class="machine-coordinates"
 >
+  
+  Coordinates:
+  
   <span>
     lat=unknown
   </span>
