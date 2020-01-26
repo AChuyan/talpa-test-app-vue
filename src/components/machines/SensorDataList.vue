@@ -1,5 +1,5 @@
 <template>
-  <ApolloQuery v-if="sensorId" :query="query" :variables="{ id: sensorId }"
+  <ApolloQuery v-if="sensorId" :query="query" :variables="{ filters: {id: sensorId, timestamp } }"
   >
     <template slot-scope="{ result: { data, loading } }">
       <div class="loader" v-if="loading">Loading...</div>
@@ -25,6 +25,7 @@
     data() {
       return {
         query: sensor,
+        timestamp: (+new Date()).toString(), // TODO datepicker should be used
       }
     },
     methods: {

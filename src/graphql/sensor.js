@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
 export const sensor = gql`
-  query sensor($id: ID!) {
-    sensor(id: $id) {
+  query sensor($filters: SensorFilters) {
+    sensor(filters: $filters) {
       id
       name
       data {
