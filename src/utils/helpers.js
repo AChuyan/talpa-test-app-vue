@@ -1,4 +1,4 @@
-export const getMachineName = str => {
+export const getTitle = str => {
   if (typeof str !== "string") {
     return '';
   }

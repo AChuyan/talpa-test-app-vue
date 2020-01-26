@@ -6,7 +6,7 @@
         v-bind:key="sensor.id"
         v-bind:value="sensor.id"
       >
-        {{ sensor.name }}
+        {{ getTitle(sensor.name) }}
       </option>
     </select>
 
@@ -16,6 +16,7 @@
 
 <script>
   import SensorDataList from './SensorDataList';
+  import { getTitle } from '../../utils/helpers';
 
   export default {
     components: {
@@ -25,6 +26,9 @@
       return {
         selectedSensorId: null
       }
+    },
+    methods: {
+      getTitle,
     },
     name: 'sensors-section',
     props: ['sensors'],

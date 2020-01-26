@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import { getMachineName } from "../../utils/helpers";
+  import { getTitle } from "../../utils/helpers";
 
   export default {
     name: 'machine-list-item',
@@ -15,7 +15,7 @@
         return `/machine/${this.machine.id}`;
       },
       title: function () {
-        return getMachineName(this.machine.name);
+        return getTitle(this.machine.name);
       }
     }
   }

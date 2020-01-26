@@ -6,7 +6,7 @@
       <template slot-scope="{ result: { data, loading } }">
         <div class="loader" v-if="loading">Loading...</div>
         <div class="machine-info" v-if="data && data.machine">
-          <h4>{{ getMachineName(data.machine.name) }}</h4>
+          <h4>{{ getTitle(data.machine.name) }}</h4>
           <p>Position:
             <span>lat={{ data.machine.lastKnownPosition.lat }}</span>
             <span> lng={{ data.machine.lastKnownPosition.lng }}</span>
@@ -20,7 +20,7 @@
 
 <script>
   import { machine } from "../../graphql/machine";
-  import { getMachineName } from "../../utils/helpers";
+  import { getTitle } from "../../utils/helpers";
   import SensorsSection from "./SensorsSection";
 
   export default {
@@ -33,7 +33,7 @@
       }
     },
     methods: {
-      getMachineName,
+      getTitle,
     },
     name: 'machine-view',
   }
