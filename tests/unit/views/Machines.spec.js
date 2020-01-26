@@ -1,12 +1,27 @@
 import { shallowMount } from '@vue/test-utils'
 import Machines from '@/views/Machines.vue'
 
-jest.mock('@/components/machines/MachineList');
+describe('Machine view', () => {
+  let wrapper;
 
-describe('MachineList view', () => {
-  test('should renders correctly', () => {
-    const wrapper = shallowMount(Machines);
+  beforeEach(() => {
+    wrapper = shallowMount(Machines, {
+      propsData: {},
+      mocks: {},
+      stubs: {},
+      methods: {},
+    });
+  });
 
-    expect(wrapper).toMatchSnapshot();
+  afterEach(() => {
+    wrapper.destroy();
+  });
+
+  test('is a Vue instance', () => {
+    expect(wrapper.isVueInstance()).toBeTruthy()
+  });
+
+  test('renders correctly', () => {
+    expect(wrapper.element).toMatchSnapshot()
   });
 });

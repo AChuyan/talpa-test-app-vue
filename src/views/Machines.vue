@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import MachineList from '../components/machines/MachineList'
+  import MachineList from '@/components/machines/MachineList'
 
   export default {
     components: {

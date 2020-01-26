@@ -1,8 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MachineList view should renders correctly 1`] = `
-<div class="machines-list-page">
-  <h3>List of available machines</h3>
-  <machine-list-stub></machine-list-stub>
+exports[`Machine view renders correctly 1`] = `
+<div
+  class="machines-list-page"
+>
+  <h3>
+    List of available machines
+  </h3>
+   
+  <machine-list-stub />
 </div>
 `;
