@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MachineCoordinates component renders correctly 1`] = `
+<p
+  class="machine-coordinates"
+>
+  <span>
+    lat=unknown
+  </span>
+   
+  <span>
+    lng=unknown
+  </span>
+</p>
+`;

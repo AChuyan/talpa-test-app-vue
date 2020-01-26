@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PrimaryNavButton should render correctly id isNavOpen is false 1`] = `
+exports[`MachineList view should renders correctly 1`] = `
 <div class="machines-list-page">
   <h3>List of available machines</h3>
   <machine-list-stub></machine-list-stub>
