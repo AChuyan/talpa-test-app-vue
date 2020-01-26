@@ -5,8 +5,8 @@
     >
       <template slot-scope="{ result: { data, loading } }">
         <div class="loader" v-if="loading">Loading...</div>
-        <div class="machine-info" v-if="data && data.machine">
-          <h4>{{ getTitle(data.machine.name) }}</h4>
+        <div class="machine-info" v-if="get(data, 'machine')">
+          <h4 class="machine-view-title">Machine: {{ getTitle(data.machine.name) }}</h4>
           <machine-coordinates v-bind:coordinates="get(data, 'machine.lastKnownPosition')"/>
         </div>
         <sensors-section v-if="get(data, 'machine')" v-bind:sensors="get(data, 'machine.sensors')"/>
@@ -44,6 +44,9 @@
 <style scoped>
   .machine-view {
     padding: 0 1rem;
+  }
+  .machine-view-title {
+    text-transform: capitalize;
   }
   .machine-info {
     align-items: center;
