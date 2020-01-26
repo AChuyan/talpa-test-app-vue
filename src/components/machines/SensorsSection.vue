@@ -1,6 +1,7 @@
 <template>
   <div class="sensors-section">
     <select class="sensor-select" v-model="selectedSensorId">
+      <option :value="null" disabled>Please select sensor</option>
       <option
         v-for="sensor of sensors"
         v-bind:key="sensor.id"
