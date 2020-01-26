@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
 import Machines from '@/views/Machines.vue'
 
-jest.mock('@/components/mashines/MachineList');
+jest.mock('@/components/machines/MachineList');
 
 describe('MachineList view', () => {
   test('should renders correctly', () => {

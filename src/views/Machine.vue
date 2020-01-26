@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import MachineView from "../components/mashines/MachineView";
+  import MachineView from "../components/machines/MachineView";
 
   export default {
     components: {
