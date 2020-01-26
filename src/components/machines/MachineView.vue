@@ -7,26 +7,25 @@
         <div class="loader" v-if="loading">Loading...</div>
         <div class="machine-info" v-if="data && data.machine">
           <h4>{{ getTitle(data.machine.name) }}</h4>
-          <p>Position:
-            <span>lat={{ get(data, 'machine.lastKnownPosition.lat', coordinatesPlaceholder) }}</span>
-            <span> lng={{ get(data, 'machine.lastKnownPosition.lng', coordinatesPlaceholder) }}</span>
-          </p>
+          <machine-coordinates v-bind:coordinates="get(data, 'machine.lastKnownPosition')"/>
         </div>
-        <sensors-section v-if="data && data.machine" v-bind:sensors="data && data.machine && data.machine.sensors"/>
+        <sensors-section v-if="get(data, 'machine')" v-bind:sensors="get(data, 'machine.sensors')"/>
       </template>
     </ApolloQuery>
   </div>
 </template>
 
 <script>
+  import get from "lodash.get"
   import { machine } from "../../graphql/machine";
   import { getTitle } from "../../utils/helpers";
+  import MachineCoordinates from "./MachineCoordinates";
   import SensorsSection from "./SensorsSection";
-  import get from "lodash.get";
 
   export default {
     components: {
-      SensorsSection
+      SensorsSection,
+      MachineCoordinates,
     },
     data() {
       return {
